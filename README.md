@@ -3,5 +3,11 @@
 ## Build for production
 
 ```bash
-npx webpack --mode=production
+npm run build
+```
+
+## Running
+
+```bash
+npm run exec
 ```

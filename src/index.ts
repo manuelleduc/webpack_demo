@@ -1,6 +1,19 @@
-import * as _ from "lodash";
+import Graph from 'graphology';
 
-// This is the main entrypoint by convention.
-// Everything it depends on is bundled by default.
+const graph = new Graph();
 
-console.log(_.join(['a', 'b']))
+// Adding some nodes
+graph.addNode('John');
+graph.addNode('Martha');
+
+// Adding an edge
+graph.addEdge('John', 'Martha');
+
+// Displaying useful information about your graph
+console.log('Number of nodes', graph.order);
+console.log('Number of edges', graph.size);
+
+// Iterating over nodes
+graph.forEachNode(node => {
+    console.log(node);
+});
