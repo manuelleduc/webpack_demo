@@ -36,3 +36,7 @@ console.log('Number of edges', graph.size);
 graph.forEachNode(node => {
     console.log(node);
 });
+
+export function test() {
+    console.log("exporte method!")
+} 

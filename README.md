@@ -21,3 +21,20 @@ The content of `src/main/resources` should be considered as a npm project with t
 
 To upgrade the version of a dependecy, edit `src/main/resources/package.json`
 Run `npm install` on `src/main/resources` to update `src/main/resources/package-lock.json`. Without  this step, the updated version is not taken into account during the maven build.
+
+### Using the bundle inside XWiki
+
+Create a  `XWiki.JavaScriptExtension` XObject, with the following content, and `Parse content=Yes`.
+
+```javascript
+require.config({
+  paths: {
+    'bundle': '$services.webjars.url('org.xwiki.contrib:webpack-demo', 'bundle.js')'
+  }
+});
+
+require(['bundle'], function (bundle) {
+  console.log('loaded');
+  bundle.test();
+});
+```
