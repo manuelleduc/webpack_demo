@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "graphology": "^0.25.1"
+    "graphology": "0.25.1"
   },
   "devDependencies": {
     "ts-loader": "9.4.3",
